@@ -1,5 +1,5 @@
 .vscode/*
-src/main.cpp
+main.cpp
 *.o
 main
 compile.txt
