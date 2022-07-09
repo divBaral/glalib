@@ -1,3 +1,0 @@
-g++ -c src/*.cpp
-g++ -o main *.o
-./main
