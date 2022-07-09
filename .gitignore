@@ -1,4 +1,4 @@
-compile.txt
+compile.text
 .vscode/*
 src/main.cpp
 *.o
