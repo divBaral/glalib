@@ -10,9 +10,9 @@ Point Point::operator+(const Point &p)
 {
     return Point(x+p.x, y+p.y, z+p.z);
 }
-Point Point::operator-(const Point &p) 
+Vector Point::operator-(const Point &p) 
 {
-    return Point(x-p.x, y-p.y, z-p.z);
+    return Vector(x-p.x, y-p.y, z-p.z);
 }
 void Point::normalize() 
 {

@@ -1,6 +1,7 @@
 // This contains:
 // A parent class for linear, afﬁne, and projective
 // transformations.
+#pragma once
 #include "MatrixTransformation2.hpp"
 #include "Point2d.hpp"
 #include <cmath>
