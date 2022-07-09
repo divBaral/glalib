@@ -3,12 +3,14 @@
 // transformations.
 #include "MatrixTransformation2.hpp"
 #include "Point2d.hpp"
+#include <cmath>
+#define PI 3.141516
 
 class AffineTransformation2
 {
-
+public:
     static Matrix3f RotateXY(double angle);
-    static Matrix3f Translate(Vector2d v);
+    static Matrix3f Translate( Vector2d v);
     static Matrix3f Translate(Point2d p, Point2d q);
     static Matrix3f AxisScale(double x_amount, double y_amount);
     static Matrix3f RotateAboutPoint(Point2d p, double angle);

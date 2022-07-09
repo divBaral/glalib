@@ -1,4 +1,4 @@
-#include "include/Point.hpp"
+#include "../include/Point.hpp"
 
 Point::Point(float px, float py, float pz) 
 {

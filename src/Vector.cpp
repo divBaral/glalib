@@ -1,4 +1,4 @@
-#include "include/Vector.hpp"
+#include "../include/Vector.hpp"
 
 Vector::Vector(float px, float py, float pz) 
 {

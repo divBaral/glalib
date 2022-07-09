@@ -1,3 +1,3 @@
-g++ -c *.cpp
+g++ -c source/*.cpp
 g++ -o main *.o
 ./main
