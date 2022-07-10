@@ -16,5 +16,6 @@ struct Vector
     Vector normalize();
     Vector scale(float k);
     
+    
 
 };

@@ -22,3 +22,8 @@ void Point::normalize()
     z = z/d;
    
 }
+Point::Point( Vector v ) {
+    x = v.x;
+    y = v.y;
+    z = v.z;
+}
