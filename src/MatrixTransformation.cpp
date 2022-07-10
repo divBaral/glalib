@@ -151,13 +151,15 @@ Point Matrix4f::operator*(Point p)
    float r[n];
    float a[n];
     a[0]=p.x;a[1]=p.y; a[2] = p.z;a[3] = Point::h;
-    a[0]=p.x;a[1] =p.y; a[2]=p.z; a[3] = Point::h;
     for ( int i=0; i<n; ++ i) {
         float s=0;
         for (int j=0; j<m; ++j ) {
             s+=mat[i][j]*a[j];
         }
         r[i] = s;
+    }
+    for ( int i=0; i<n; ++i ) {
+        r[i] = r[i]/r[n-1];
     }
     return Point(r[0],r[1],r[2]);
 
