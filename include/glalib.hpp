@@ -1,4 +1,4 @@
-
+#pragma  once
 #include "AffineTransformation.hpp"
 #include "MatrixTransformation.hpp"
 #include "MatrixTransformation.hpp"
