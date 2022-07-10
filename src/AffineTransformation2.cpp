@@ -54,7 +54,7 @@ Matrix3f AffineTransformation2::PointsToPoints(Point2d p1, Point2d p2, Point2d p
 {
     Matrix3f P = Matrix3f::ConstructByColumns(p1,p2,p3);
     Matrix3f Q = Matrix3f::ConstructByColumns(q1,q2,q3);
-
+  
     return Q*P.Invert();
    
 

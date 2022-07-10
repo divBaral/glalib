@@ -95,8 +95,8 @@ Matrix3f Matrix3f::Invert()
 }
 void Matrix3f::Print()
 {
-    for ( int i=0; i<n; ++i ) {
-        for ( int j=0; j<m; ++j ) {
+    for ( int i=0; i<m; ++i ) {
+        for ( int j=0; j<n; ++j ) {
             std::cout<<mat[i][j]<<" ";
         }
         std::cout <<std::endl;
@@ -111,10 +111,10 @@ Matrix3f Matrix3f::operator*(const Matrix3f &mt)
             for (int k=0; k<n; ++k ) {
                 s += mat[i][k]*mt.mat[k][j];
             }
-            if ( fabs(s) < 1e-5 ) s=0.0;
             r.mat[i][j] = s;
         }
     }
+   
     return r;
 
 }
