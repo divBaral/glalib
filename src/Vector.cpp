@@ -17,9 +17,7 @@ Vector Vector::operator-( Vector p)
 }
 Vector Vector::operator*(float k)
 {
-    Vector r;
-    r = scale(k);
-    return r;
+    return Vector(x*k, y*k, z*k);
 }
 float  Vector::operator%( Vector p) 
 {
