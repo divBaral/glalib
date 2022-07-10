@@ -10,9 +10,11 @@ struct Vector
     Vector operator-( Vector p);
     float operator%( Vector p); //dot product
     float dot(Vector p);
+
     Vector cross(Vector p);
     Vector operator*( Vector p); //cros product
-    void normalize();
+    Vector normalize();
+    Vector scale(float k);
     
 
 };

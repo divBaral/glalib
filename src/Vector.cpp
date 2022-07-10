@@ -36,11 +36,19 @@ Vector  Vector::cross(Vector p)
     float z = x*p.y - y*p.x;
     return Vector(x,y,z) ;
 }
-void Vector::normalize()
+Vector Vector::normalize()
 {
     float d = std::sqrt(x*x+y*y+z*z);
     assert( d!= 0);
     x = x/d;
     y = y/d;
     z = z/d;
+    return *this;
+}
+Vector Vector::scale(float k) 
+{
+    x = x*k;
+    y = y*k;
+    z = z*k;
+    return *this;
 }
