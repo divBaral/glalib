@@ -15,6 +15,12 @@ Vector Vector::operator-( Vector p)
 {
     return Vector(x-p.x, y-p.y, z-p.z);
 }
+Vector Vector::operator*(float k)
+{
+    Vector r;
+    r = scale(k);
+    return r;
+}
 float  Vector::operator%( Vector p) 
 {
     return p.x*x+p.y*y+p.z*z;

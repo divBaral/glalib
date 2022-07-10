@@ -8,6 +8,7 @@ struct Vector
     Vector(float px=0, float py=0, float pz=0) ;
     Vector operator+( Vector p);
     Vector operator-( Vector p);
+     Vector operator*( float k);
     float operator%( Vector p); //dot product
     float dot(Vector p);
 
