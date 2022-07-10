@@ -27,6 +27,18 @@ Matrix4f::Matrix4f( float a[4][4] )
     }
     
 }
+Matrix4f::Matrix4f(float a11, float a12, float a13, float a14,
+             float a21, float a22, float a23, float a24, 
+             float a31, float a32, float a33, float a34,
+             float a41, float a42, float a43, float a44 )
+{
+    mat[0][0] =  a11, mat[0][1] =  a12, mat[0][2] =  a13, mat[0][3] =  a14,
+    mat[1][0] =  a21, mat[1][1] =  a22, mat[1][2] =  a23, mat[1][3] =  a24, 
+    mat[2][0] =  a31, mat[2][1] =  a32, mat[2][2] =  a33, mat[2][3] =  a34,
+    mat[3][0] =  a41, mat[3][1] =  a42, mat[3][2] =  a43, mat[3][3] =  a44;
+
+
+}
 Matrix4f::Matrix4f(const Matrix3f& m3)
 {
     for (int i=0; i<3; ++i ) {
