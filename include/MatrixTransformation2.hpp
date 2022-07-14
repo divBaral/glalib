@@ -35,15 +35,15 @@ Matrix3f  Matrix3f::ConstructByColumns(T1 p, T2 q, T3 r)
     float a[3][3];
     a[0][0]=  p.x;
     a[1][0] = p.y;
-    a[2][0] = T1::h;
+    a[2][0] = p.h;
 
     a[0][1]=  q.x;
     a[1][1] = q.y;
-    a[2][1] = T2::h;
+    a[2][1] = q.h;
 
     a[0][2]=  r.x;
     a[1][2] = r.y;
-    a[2][2] = T3::h;
+    a[2][2] = r.h;
 
     return Matrix3f(a);
 }

@@ -22,6 +22,16 @@ void Point::normalize()
     z = z/d;
    
 }
+void Point::homogenize()
+{
+  
+    if ( h !=0 ) {
+        x = x/h;
+        y = y/h;
+        z = z/h;
+    }
+}
+
 Point::Point( Vector v ) {
     x = v.x;
     y = v.y;

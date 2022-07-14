@@ -133,7 +133,8 @@ Vector2d Matrix3f::operator*( Vector2d v)
         
 
     }
-    if ( r[2] != 1 ) {
+    v.h = r[2];
+    if ( v.h != 1 ) {
         std::cout<<"Warning: Non-homogenous Matrix3f and Vector Multiplication\n";
     }
     return Vector2d(r[0], r[1]);

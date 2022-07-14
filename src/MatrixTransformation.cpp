@@ -138,19 +138,18 @@ Vector Matrix4f::operator*( Vector v)
         
 
     }
-    if ( r[3] != 1 ) {
+    v.h = r[3];
+    if ( v.h != 1 ) {
         std::cout<<"Warning: Non-homogenous Matrix4f and Vector Multiplication\n";
     }
     return Vector(r[0], r[1],r[2]);
-
-    
 
 }
 Point Matrix4f::operator*(Point p) 
 {
    float r[n];
    float a[n];
-    a[0]=p.x;a[1]=p.y; a[2] = p.z;a[3] = Point::h;
+    a[0]=p.x;a[1]=p.y; a[2] = p.z;a[3] = p.h;
     for ( int i=0; i<n; ++ i) {
         float s=0;
         for (int j=0; j<m; ++j ) {

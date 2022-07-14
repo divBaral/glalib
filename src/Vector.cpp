@@ -27,11 +27,12 @@ float Vector::dot( Vector p) {
     return *this%p;
 }
 Vector  Vector::operator*( Vector p) 
-{
-    float x = y*p.z - z*p.y;
-    float y = z*p.x - x*p.z;
-    float z = x*p.y - y*p.x;
-    return Vector(x,y,z) ;
+{ 
+    Vector r;
+     r.x = y*p.z - z*p.y;
+     r.y = z*p.x - x*p.z;
+     r.z = x*p.y - y*p.x;
+    return r;
 }
 Vector  Vector::cross(Vector p)
 {
@@ -50,6 +51,7 @@ Vector Vector::normalize()
     z = z/d;
     return *this;
 }
+
 Vector Vector::scale(float k) 
 {
     x = x*k;

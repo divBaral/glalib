@@ -21,8 +21,6 @@ public:
 
     Matrix4f Invert();
     Matrix4f Pinvert();//psedo invert
-    //static Matrix4f ConstructByColumns(Point p1, Point p2, Point p3);
-    //static Matrix4f ConstructByColumns(Vector v1, Vector v2, Vector v3);
     template<typename T1, typename T2, typename T3, typename T4>
     static Matrix4f ConstructByColumns(T1 p, T2 q, T3 r, T4 s);
     Matrix4f operator*(const Matrix4f& a);
@@ -45,22 +43,22 @@ Matrix4f  Matrix4f::ConstructByColumns(T1 p, T2 q, T3 r, T4 s)
     a[0][0]=  p.x;
     a[1][0] = p.y;
     a[2][0] = p.z;
-    a[3][0] = T1::h;
+    a[3][0] = p.h;
 
     a[0][1]=  q.x;
     a[1][1] = q.y;
     a[2][1] = q.z;
-    a[3][1] = T2::h;
+    a[3][1] = q.h;
 
     a[0][2]=  r.x;
     a[1][2] = r.y;
     a[2][2] = r.z;
-    a[3][2] = T3::h;
+    a[3][2] = r.h;
 
     a[0][3]=  s.x;
     a[1][3] = s.y;
     a[2][3] = s.z;
-    a[3][3] = T4::h;
+    a[3][3] = s.h;
 
     return Matrix4f(a);
 }
