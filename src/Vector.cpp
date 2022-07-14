@@ -57,5 +57,5 @@ Vector Vector::scale(float k)
     x = x*k;
     y = y*k;
     z = z*k;
-    return *this;
+    return Vector(x,y,z);
 }
