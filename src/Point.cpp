@@ -6,9 +6,20 @@ Point::Point(float px, float py, float pz)
     y=py;
     z=pz;
 }
+Point Point::operator/(float k) const 
+{
+    return Point(x/k, y/k, z/k);
+}
+Point Point::operator*(float k) const 
+{
+    return Point(x*k, y*k, z*k);
+}
 Point Point::operator+(const Point &p) 
 {
     return Point(x+p.x, y+p.y, z+p.z);
+}
+Point::operator Vector() const {
+    return Vector(x,y,z);
 }
 Vector Point::operator-(const Point &p) 
 {
@@ -21,6 +32,14 @@ void Point::normalize()
     y = y/d;
     z = z/d;
    
+}
+float Point::length() const 
+{
+    return sqrt(x*x+y*y+z*z);
+}
+Point Point::operator+=(const Point& p)
+{
+    return Point(x+p.x, y+p.y, z+p.z);
 }
 void Point::homogenize()
 {
@@ -36,4 +55,11 @@ Point::Point( Vector v ) {
     x = v.x;
     y = v.y;
     z = v.z;
+}
+Vector Point::direction()  const
+{
+    float d = this->length();
+    Vector r(0,0,0);
+    if ( d != 0 ) r = Vector(x/d, y/d, z/d);
+    return r;
 }

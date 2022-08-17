@@ -7,6 +7,15 @@ Point2d::Point2d(float px, float py)
  y{py}
 {
 }
+Point2d::Point2d( const Vector2d& v)
+{
+    x=v.x;
+    y = v.y;
+}
+Point2d::operator Vector2d() const
+{
+    return Vector2d(x, y);
+}
 Point2d Point2d::operator+(const Point2d &p) 
 {
     return Point2d(x+p.x, y+p.y);
