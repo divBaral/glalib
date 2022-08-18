@@ -25,6 +25,10 @@ Vector Point::operator-(const Point &p)
 {
     return Vector(x-p.x, y-p.y, z-p.z);
 }
+Point Point::operator-()
+{
+    return Point(-x,-y,-z);
+}
 void Point::normalize() 
 {
     float d = std::sqrt(x*x+y*y+z*z);
