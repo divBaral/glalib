@@ -39,7 +39,10 @@ float Point::length() const
 }
 Point Point::operator+=(const Point& p)
 {
-    return Point(x+p.x, y+p.y, z+p.z);
+    x+=p.x;
+    z+=p.z;
+    y+=p.y;
+    return *this;
 }
 void Point::homogenize()
 {
