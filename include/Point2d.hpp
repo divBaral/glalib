@@ -11,6 +11,7 @@ struct Point2d
     operator Vector2d() const;
     Point2d operator+(const Point2d& p);
     Vector2d operator-(const Point2d& p);
+    Point2d operator*(float k) const;
     void normalize();
 
 };

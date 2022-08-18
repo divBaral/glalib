@@ -31,3 +31,6 @@ void Point2d::normalize()
     y = y/d;
    
 }
+Point2d Point2d::operator*(float k) const {
+    return Point2d(x*k, y*k);
+}
