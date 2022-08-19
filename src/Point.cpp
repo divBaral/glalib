@@ -21,7 +21,7 @@ Point Point::operator+(const Point &p)
 Point::operator Vector() const {
     return Vector(x,y,z);
 }
-Vector Point::operator-(const Point &p) 
+Vector Point::operator-(const Point &p) const
 {
     return Vector(x-p.x, y-p.y, z-p.z);
 }

@@ -24,8 +24,8 @@ public:
     template<typename T1, typename T2, typename T3, typename T4>
     static Matrix4f ConstructByColumns(T1 p, T2 q, T3 r, T4 s);
     Matrix4f operator*(const Matrix4f& a);
-    Vector operator*( Vector v);
-    Point operator*(Point p);
+    Vector operator*( Vector v) const;
+    Point operator*(Point p) const;
     //Vector operator*(const Vector& v);
     void Print(); //operator<<
 

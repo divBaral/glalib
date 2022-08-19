@@ -123,7 +123,7 @@ Matrix4f Matrix4f::operator*(const Matrix4f &mt)
     return r;
 
 }
-Vector Matrix4f::operator*( Vector v) 
+Vector Matrix4f::operator*( Vector v) const
 {
     float a[n];
     float r[n];
@@ -140,12 +140,12 @@ Vector Matrix4f::operator*( Vector v)
     }
     v.h = r[3];
     if ( v.h != 1 ) {
-        std::cout<<"Warning: Non-homogenous Matrix4f and Vector Multiplication\n";
+       // std::cout<<"Warning: Non-homogenous Matrix4f and Vector Multiplication\n";
     }
-    return Vector(r[0], r[1],r[2]);
+    return Vector(r[0]/v.h, r[1]/v.h,r[2]/v.h);
 
 }
-Point Matrix4f::operator*(Point p) 
+Point Matrix4f::operator*(Point p)  const
 {
    float r[n];
    float a[n];
