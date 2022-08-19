@@ -3,6 +3,7 @@
 #include <cassert>
 #include <iostream>
 #include "Point2d.hpp"
+#include "Point.hpp"
 #include "Vector.hpp"
 #include "Vector2d.hpp"
 
@@ -20,6 +21,7 @@ public:
     Matrix3f operator*(const Matrix3f& a);
     Vector2d operator*( Vector2d v);
     Point2d operator*(Point2d p);
+    Point operator*(Point p) const;
     //Vector operator*(const Vector& v);
     void Print(); //operator<<
 

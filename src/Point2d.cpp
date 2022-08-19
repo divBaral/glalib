@@ -34,3 +34,7 @@ void Point2d::normalize()
 Point2d Point2d::operator*(float k) const {
     return Point2d(x*k, y*k);
 }
+float Point2d::length()
+{
+    return sqrt(x*x+y*y);
+}

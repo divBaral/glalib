@@ -142,6 +142,25 @@ Vector2d Matrix3f::operator*( Vector2d v)
     
 
 }
+Point Matrix3f::operator*(Point p)  const
+{
+   float r[n];
+   float a[n];
+    a[0]=p.x;a[1]=p.y; a[2] = p.z;
+    for ( int i=0; i<n; ++ i) {
+        float s=0;
+        for (int j=0; j<m; ++j ) {
+            s+=mat[i][j]*a[j];
+        }
+        r[i] = s;
+        
+
+    }
+    return Point(r[0],r[1],r[2]);
+
+    
+
+}
 Point2d Matrix3f::operator*(Point2d p) 
 {
    float r[n];
