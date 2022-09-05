@@ -12,6 +12,7 @@ class Matrix4f
 {
 public:
     Matrix4f(); //identiy Matrix4f
+   // Matrix4f(Matrix4f&& m) noexcept;
     Matrix4f(float a[4][4] );
     Matrix4f(const Matrix3f& m );
     Matrix4f(float a11, float a12, float a13, float a14,

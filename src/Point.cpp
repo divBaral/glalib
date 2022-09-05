@@ -48,6 +48,13 @@ Point Point::operator+=(const Point& p)
     y+=p.y;
     return *this;
 }
+Point Point::operator-=(const Point& p)
+{
+    x-=p.x;
+    z-=p.z;
+    y-=p.y;
+    return *this;
+}
 void Point::homogenize()
 {
   

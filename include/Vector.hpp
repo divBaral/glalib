@@ -7,7 +7,8 @@ struct Vector
     int h = 0.0f;
     Vector(float px=0, float py=0, float pz=0) ;
     Vector operator+( Vector p) const;
-    Vector operator+=(Vector p) const;
+    Vector operator+=(Vector p) ;
+    Vector operator-=(const Vector& p) ;
     Vector operator-( Vector p) const;
     Vector operator*( float k) const;
     Vector operator/(float k) const;

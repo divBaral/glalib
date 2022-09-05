@@ -79,7 +79,17 @@ Vector Vector::operator-() const
 { 
     return Vector(-x, -y, -z);
 }
-Vector Vector::operator+=(Vector p) const
+Vector Vector::operator+=(Vector p) 
 {
-    return Vector(x+p.x, y+p.y, z+p.z);
+    x+=p.x;
+    z+=p.z;
+    y+=p.y;
+    return *this;
+}
+Vector Vector::operator-=(const Vector& p) 
+{
+    x-=p.x;
+    z-=p.z;
+    y-=p.y;
+    return *this;
 }

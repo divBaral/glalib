@@ -11,6 +11,7 @@ struct Point
 
     Point operator+(const Point& p);
     Point operator+=(const Point& p);
+    Point operator-=(const Point& p);
     Vector operator-(const Point& p) const;
     Point operator-();
     Point operator/(float k) const;
